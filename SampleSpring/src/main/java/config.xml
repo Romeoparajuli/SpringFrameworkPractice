@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean class="com.spring.SampleSpring.model.Student" name="student">
+		<property name="id">
+			<value>1212</value>
+		</property>
+		<property name="name">
+			<value>Milan Parajuli</value>
+		</property>
+		<property name="address">
+			<value>Palpa</value>
+		</property>
+	</bean>
+
+	<bean class="com.spring.SampleSpring.model.Student"
+		name="student1">
+		<property name="id" value="1213" />
+		<property name="name" value="Milan Sharma" />
+		<property name="address" value="Palpa" />
+	</bean>
+
+	<bean class="com.spring.SampleSpring.model.Student"
+		name="student2" p:id="1214" p:name="Shyam Bahadur" p:address="Palpa" />
+
+
+
+	<bean id="q" class="com.spring.SampleSpring.model.Question">
+		<property name="id" value="1" />
+		<property name="name" value="What is Java?" />
+		<property name="answers">
+			<list>
+				<value>Java is a programming language</value>
+				<value>Java is a platform independent programming language  </value>
+				<value>Java is an Island</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="userBean" class="com.conInjecetion.UserCon">
+		<constructor-arg value="10"></constructor-arg>
+		<constructor-arg
+			value="Milan Parajuli ask 'what is java'"></constructor-arg>
+		<constructor-arg>
+			<list>
+				<value>Java is a programming language</value>
+				<value>Java is a Platform</value>
+				<value>Java is an Island of Indonasia</value>
+			</list>
+		</constructor-arg>
+		<constructor-arg>
+			<map>
+				<entry key="Java is a Programming Language" value="Ajay Kumar"></entry>
+				<entry key="Java is a Platform" value="John Smith"></entry>
+				<entry key="Java is an Island" value="Raj Kumar"></entry>
+			</map>
+		</constructor-arg>
+	</bean>
+
+
+</beans>

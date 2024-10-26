@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Define Address Beans -->
+	<bean class="DepnInj.Adress" id="Add" p:city="Tansen"
+		p:Street="olipath" />
+	<bean class="DepnInj.Adress" id="Add1" p:city="Tansen"
+		p:Street="rampath" />
+		
+		
+
+	<!-- Define Employee Bean -->
+	<bean class="DepnInj.Employee" id="emp" p:id="420"
+		p:name="Fucker boy" p:salary="20000000000" p:adress-ref="Add" />
+	<bean class="DepnInj.Employee" id="emp" p:id="420"
+		p:name="Fucker boy" p:salary="20000000000" p:adress-ref="Add1" />
+</beans>
